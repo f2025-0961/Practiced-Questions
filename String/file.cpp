@@ -3,17 +3,14 @@ using namespace std;
 
 void copyString(string &originalstring, string &copy);
 
+void stringLength(string &originalString);
+
 int main()
 {
     string s = "i love coding!";
-    int length = 0;
-    char ch;
-    while (ch == '\0')
-    {
-        length++;
-    }
-    cout << "length of string is: " << length << endl;
-     string s1 = "hello";
+    stringLength(s);
+    cout << endl;
+    string s1 = "hello";
     string s2 = "";
     copyString(s1, s2);
     cout << s1 << endl;
@@ -28,4 +25,14 @@ void copyString(string &originalstring, string &copy)
     {
         copy = copy + originalstring[i];
     }
+}
+
+void stringLength(string &originalString)
+{
+    int length = 0;
+    for (char c : originalString)
+    {
+        length++;
+    }
+    cout << "Length of string is: " << length << endl;
 }
